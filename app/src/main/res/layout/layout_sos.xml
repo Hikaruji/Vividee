@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9534F"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/iv_sos_background"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/sos_circle"
+        android:contentDescription="SOS indicator circle"/>
+
+    <TextView
+        android:id="@+id/tv_sos_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="SOS"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_sos_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_sos_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Please standby, we are currently requesting for help."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_cancel_sos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_sos_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="Cancel SOS"
+        android:backgroundTint="@android:color/white"
+        android:textColor="#D9534F"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:contentDescription="Cancel SOS button"/>
+
+</RelativeLayout>
