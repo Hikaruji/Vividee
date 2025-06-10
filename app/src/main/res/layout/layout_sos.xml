@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="SOS"
-        android:textColor="@color/white"
+        android:textColor="#D32F2F"
         android:textSize="60sp"
         android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
         android:text="Please standby, we are currently requesting for help."
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="32sp" />
 
     <Button
         android:id="@+id/btn_cancel_sos"
@@ -46,8 +46,14 @@
         android:text="Cancel SOS"
         android:backgroundTint="@android:color/white"
         android:textColor="#D9534F"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:contentDescription="Cancel SOS button"/>
+
+
 
 </RelativeLayout>

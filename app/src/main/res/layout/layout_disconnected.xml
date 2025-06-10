@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFD8D8"> <TextView
+    android:background="#E0E0E0"> <TextView
     android:id="@+id/tv_app_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -22,44 +22,36 @@
         android:layout_height="300dp"
         android:alpha="0.5"
         android:src="@drawable/gradient_circle_disconnected"
-        app:layout_constraintBottom_toTopOf="@id/card_battery"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_app_title"
         android:contentDescription="Status indicator showing disconnected state"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_battery"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:cardBackgroundColor="#FEFBF3"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_status_indicator">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="Battery: --%"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="22sp"
-            android:textStyle="bold"/>
-    </androidx.cardview.widget.CardView>
+        android:text="Disconnected"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/iv_status_indicator"
+        app:layout_constraintBottom_toBottomOf="@id/iv_status_indicator"
+        app:layout_constraintStart_toStartOf="@id/iv_status_indicator"
+        app:layout_constraintEnd_toEndOf="@id/iv_status_indicator" />
+
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_obstacle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        app:cardBackgroundColor="#E57373"
         app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="#616161"
+        app:layout_constraintTop_toBottomOf="@id/iv_status_indicator"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_battery">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="24dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

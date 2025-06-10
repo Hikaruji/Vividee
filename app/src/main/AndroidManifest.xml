@@ -14,6 +14,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+
 
     <application
         android:allowBackup="true"
@@ -26,6 +32,18 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".BubbleActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:label="Smart Cane Status"
+            android:allowEmbedded="true"
+            android:documentLaunchMode="always"
+            android:resizeableActivity="true" />
+        <service
+            android:name=".CaneService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
